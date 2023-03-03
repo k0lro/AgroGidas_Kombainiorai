@@ -10,9 +10,10 @@
         android:id="@+id/LoginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="506dp" />
+        android:text="Prisijungtis"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="484dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -20,6 +21,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:text="Slaptažodis"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="96dp"
         tools:layout_editor_absoluteY="400dp" />
 
@@ -29,14 +33,44 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:text="Elektroninis paštas"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="96dp"
         tools:layout_editor_absoluteY="286dp" />
 
     <TextView
         android:id="@+id/textView2"
+        android:layout_width="212dp"
+        android:layout_height="45dp"
+        android:text="Prisijungimas"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="126dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="96dp" />
+        android:text="Pamiršau slaptažodį"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="563dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Neturite paskyros"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="668dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registruotis"
+        tools:layout_editor_absoluteX="282dp"
+        tools:layout_editor_absoluteY="668dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
