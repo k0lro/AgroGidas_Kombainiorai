@@ -8,7 +8,7 @@
             android:id="@+id/nav_home"
             android:title="Pagrindinis puslapis" />
         <item
-            android:id="@+id/activity_login"
+            android:id="@+id/loginActivity"
             android:title="Prisijungimas" />
     </group>
 </menu>
