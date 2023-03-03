@@ -39,9 +39,9 @@
         android:background="@drawable/edittext_background"
         android:elevation="3dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:padding="13dp"
-        android:text="Slaptažodis"
+        android:hint="Slaptažodis"
         android:textColor="#888887"
         app:layout_constraintEnd_toEndOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,17 +59,18 @@
         android:minHeight="30dp"
         android:padding="13dp"
         android:textColor="#888887"
-        android:text="Elektroninis paštas"
+        android:hint="Elektroninis paštas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"/>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/forgot"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pamiršau slaptažodį"
-        android:layout_marginTop="20dp"
+        android:layout_height="48dp"
+        android:text="Pamiršote slaptažodį?"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
         android:textColor="#FF009688"
         app:layout_constraintEnd_toEndOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,27 +80,22 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Neturite paskyros"
+        android:text="Neturite paskyros?"
         android:layout_marginTop="90dp"
-        android:layout_marginRight="100dp"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 
-    <Button
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/registr"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:clickable="true"
         android:text="Registruotis"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="77dp"
         android:textColor="#FF009688"
-        android:background="@drawable/edittext_background"
-        android:elevation="3dp"
-        android:ems="10"
-        app:layout_constraintEnd_toEndOf ="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginButton"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
