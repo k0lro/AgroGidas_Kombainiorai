@@ -13,10 +13,9 @@
         android:layout_height="200dp"
         android:layout_marginTop="55dp"
         android:src="@mipmap/autogidas"
-        app:layout_constaintEnd_toEndOf="parent"
-        app:layout_constaintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -30,7 +29,6 @@
         android:padding="13dp"
         android:text="Vardas"
         android:textColor="#888887"
-        app:layout_constaintEnd_toEnd="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -47,8 +45,7 @@
         android:padding="13dp"
         android:text="Pavardė"
         android:textColor="#888887"
-        app:layout_constaintEnd_toEnd="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
@@ -65,7 +62,6 @@
         android:text="Elektroninis paštas"
         android:textColor="#888887"
 
-        app:layout_constaintEnd_toEnd="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
@@ -96,7 +92,6 @@
         android:backgroundTint="#FF009688"
 
         android:text="REGISTRUOTIS"
-        app:layout_constaintEnd_toEnd="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
