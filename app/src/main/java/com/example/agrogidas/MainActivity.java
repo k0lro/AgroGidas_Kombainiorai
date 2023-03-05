@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -26,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
     private ImageView logo;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+
+
+
+
+
 
 
 
@@ -45,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.loginActivity, R.id.nav_slideshow)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -68,13 +75,42 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
+
+
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.menukontaktai:
+                Intent intent = new Intent(MainActivity.this,Kontakt.class );
+                startActivity(intent);
+                return true;
+
+            case R.id.loginActivity:
+                Intent intent1 = new Intent(MainActivity.this,loginActivity.class );
+                startActivity(intent1);
+
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+
+
     }
 
     @Override
@@ -83,6 +119,12 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+
+
+
+
 
 
 }
