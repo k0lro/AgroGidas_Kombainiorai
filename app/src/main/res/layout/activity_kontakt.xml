@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background = "@color/black"
     tools:context=".Kontakt">
 
     <TextView
@@ -13,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Klientų aptarnavimo biuras:"
-        android:textColor="@color/white"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +25,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Studentų g. 67, Kaunas. auditorija - 101"
-        android:textColor="@color/white"
         android:textSize="17dp"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         tools:layout_editor_absoluteX="45dp"
@@ -41,7 +38,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="Kūrėjai:"
-        android:textColor="@color/white"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
@@ -60,7 +56,6 @@
         \nGiedrius Šlikta                  giesli@ktu.lt
         \nGytis Meškuotis               gytmes@ktu.lt
         \nGustis Dasevičius            gusdas@ktu.lt"
-        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         tools:layout_editor_absoluteX="46dp"
         app:layout_constraintEnd_toEndOf="parent"
