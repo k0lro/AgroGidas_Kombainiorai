@@ -158,7 +158,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="8 Simboliai"
+        android:text="Nors 8 simboliai"
         android:textSize="16sp"
         android:textColor="@color/brightGray"
         app:layout_constraintBottom_toBottomOf="@+id/raides8_img"

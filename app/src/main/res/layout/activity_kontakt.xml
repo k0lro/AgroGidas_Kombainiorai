@@ -7,13 +7,12 @@
     android:background = "@color/black"
     tools:context=".Kontakt">
 
-
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Biuras"
+        android:text="Klientų aptarnavimo biuras:"
         android:textColor="@color/white"
         android:textSize="25dp"
         android:textStyle="bold"
@@ -21,19 +20,17 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Klientų aptarnavimo biuras:" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Studentų g. 67, Kaunas. auditorija - 101"
         android:textColor="@color/white"
         android:textSize="17dp"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         tools:layout_editor_absoluteX="45dp"
-        tools:text="Studentų g. 67, Kaunas. auditorija - 101"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
@@ -43,13 +40,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:text="TextView"
+        android:text="Kūrėjai:"
         android:textColor="@color/white"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         tools:layout_editor_absoluteX="45dp"
-        tools:text="Kūrėjai:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
@@ -60,16 +56,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:text="TextView"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-
-
-        tools:layout_editor_absoluteX="46dp"
-        tools:text="Lukas Peleckis                 lukpel@ktu.lt
+        android:text="Lukas Peleckis                 lukpel@ktu.lt
         \nGiedrius Šlikta                  giesli@ktu.lt
         \nGytis Meškuotis               gytmes@ktu.lt
         \nGustis Dasevičius            gusdas@ktu.lt"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        tools:layout_editor_absoluteX="46dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 

@@ -3,9 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ImageView
+        android:id="@+id/logog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:clickable="true"
         android:src="@mipmap/barlogo" />
 </RelativeLayout>
