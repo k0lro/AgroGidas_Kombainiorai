@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signupActivity">
+    tools:context=".signupActivity"
+    android:background = "@color/black">
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/darkbright"
+        android:layout_marginTop="55dp"
+        android:src="@mipmap/autogidas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,16 +21,15 @@
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="45dp"
         android:background="@drawable/edittext_background"
         android:elevation="3dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="13dp"
-        android:text="Vardas"
+        android:hint="Vardas"
         android:textColor="#888887"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -38,16 +37,15 @@
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edittext_background"
         android:elevation="3dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="13dp"
-        android:text="Pavardė"
+        android:hint="Pavardė"
         android:textColor="#888887"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintEnd_toEndOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
@@ -55,13 +53,13 @@
         android:id="@+id/editTextTextEmailAddress2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edittext_background"
         android:elevation="3dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:padding="13dp"
-        android:text="Elektroninis paštas"
+        android:hint="Elektroninis paštas"
         android:textColor="#888887"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,12 +72,13 @@
         android:id="@+id/editTextTextPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edittext_background"
         android:elevation="3dp"
         android:ems="10"
         android:padding="13dp"
-        android:text="Slaptažodis"
+        android:hint="Slaptažodis"
+        android:inputType="textPassword"
         android:textColor="#888887"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,12 +86,11 @@
         app:layout_constraintWidth_percent=".8"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="36dp"
         android:backgroundTint="#FF009688"
-
         android:text="REGISTRUOTIS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,113 +102,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Jau turite pakyrą?"
-        android:textColor="#888887"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonReg" />
 
     <TextView
         android:id="@+id/prisijung"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="2dp"
+        android:clickable="true"
         android:text="Prisijungti"
         android:textColor="#FF009688"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.05"
-        />
-
-    <!-- Slaptažodžių reikalavimai -->
-    <View
-        android:id="@+id/divider1"
-        android:layout_width="380dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="10dp"
-        android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="380dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="130dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
-
-    <ImageView
-        android:id="@+id/raides8_img"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/divider1"
-        app:layout_constraintTop_toBottomOf="@+id/divider1"
-        app:srcCompat="@mipmap/check"
-        app:tint="@color/brightGray" />
-
-    <TextView
-        android:id="@+id/raides8_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="8 Simboliai"
-        android:textSize="16sp"
-        android:textColor="@color/brightGray"
-        app:layout_constraintBottom_toBottomOf="@+id/raides8_img"
-        app:layout_constraintStart_toEndOf="@+id/raides8_img"
-        app:layout_constraintTop_toTopOf="@+id/raides8_img"
-        />
-
-    <ImageView
-        android:id="@+id/didzioji_img"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/raides8_img"
-        app:layout_constraintTop_toBottomOf="@+id/raides8_img"
-        app:srcCompat="@mipmap/check"
-        app:tint="@color/brightGray" />
-
-    <TextView
-        android:id="@+id/didzioji_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="Nors 1 didžioji raidė"
-        android:textSize="16sp"
-        android:textColor="@color/brightGray"
-        app:layout_constraintBottom_toBottomOf="@+id/didzioji_img"
-        app:layout_constraintStart_toEndOf="@+id/didzioji_img"
-        app:layout_constraintTop_toTopOf="@+id/didzioji_img"
-        />
-
-    <ImageView
-        android:id="@+id/skaicius_img"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/didzioji_img"
-        app:layout_constraintTop_toBottomOf="@+id/didzioji_img"
-        app:srcCompat="@mipmap/check"
-        app:tint="@color/brightGray" />
-
-    <TextView
-        android:id="@+id/skaicius_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="Nors 1 skaičius"
-        android:textSize="16sp"
-        android:textColor="@color/brightGray"
-        app:layout_constraintBottom_toBottomOf="@+id/skaicius_img"
-        app:layout_constraintStart_toEndOf="@+id/skaicius_img"
-        app:layout_constraintTop_toTopOf="@+id/skaicius_img"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
