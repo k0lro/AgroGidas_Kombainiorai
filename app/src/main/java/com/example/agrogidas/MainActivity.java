@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -22,27 +23,23 @@ import com.example.agrogidas.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ImageView logo;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
 
-
-
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Dar neparuošta", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -61,6 +58,16 @@ public class MainActivity extends AppCompatActivity {
         View view = inflater.inflate(R.layout.home_bar_logo, null);
         getSupportActionBar().setCustomView(view);
         //custom image for action bar end
+        logo = findViewById(R.id.logog);
+        logo.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(MainActivity.this,MainActivity.class));
+
+            }
+        });
     }
 
     @Override
@@ -76,4 +83,6 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }

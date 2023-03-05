@@ -14,7 +14,6 @@
         <activity
             android:name=".Kontakt"
             android:exported="true" />
-
         <activity
             android:name=".loginActivity"
             android:exported="true" />
