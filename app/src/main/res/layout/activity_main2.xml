@@ -87,12 +87,11 @@
         app:layout_constraintWidth_percent=".8"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
         android:backgroundTint="#FF009688"
-
         android:text="REGISTRUOTIS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,23 +106,23 @@
         android:textColor="#888887"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonReg" />
+
+    <!-- Slaptažodžių reikalavimai -->
 
     <TextView
         android:id="@+id/prisijung"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:text="Prisijungti"
         android:textColor="#FF009688"
+        android:layout_marginTop="5dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.05"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <!-- Slaptažodžių reikalavimai -->
     <View
         android:id="@+id/divider1"
         android:layout_width="380dp"
