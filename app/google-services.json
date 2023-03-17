@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "552733766111",
+    "project_id": "agrogidas-f3013",
+    "firebase_url": "https://agrogidas-f3013-default-rtdb.europe-west1.firebasedatabase.app",
+    "storage_bucket": "agrogidas-f3013.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552733766111:android:8a6eee30e0c1dff90e546a",
+        "android_client_info": {
+          "package_name": "com.example.agrogidas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552733766111-4s4hnet9cutpp88epsur30gs8mhviklj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrG3ltHJut9QCYhiaC1GWEapYvgYpI0uQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552733766111-4s4hnet9cutpp88epsur30gs8mhviklj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
