@@ -10,7 +10,6 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="55dp"
         android:src="@drawable/darkbright"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,10 +27,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"/>
+        app:layout_constraintTop_toBottomOf="@+id/passwd_login"/>
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/passwd_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -44,10 +43,10 @@
         android:textColor="#888887"
         app:layout_constraintEnd_toEndOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/email_login" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/email_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
@@ -67,11 +66,12 @@
         android:id="@+id/forgot"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:text="Pamiršau slaptažodį"
         android:layout_marginTop="20dp"
-        android:textColor="#FF009688"
         android:clickable="true"
-        app:layout_constraintEnd_toEndOf ="parent"
+        android:text="Pamiršote slaptažodį?"
+        android:textColor="#FF009688"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 
@@ -92,14 +92,16 @@
         android:id="@+id/registr"
         android:layout_width="76dp"
         android:layout_height="48dp"
-        android:layout_marginTop="5dp"
         android:clickable="true"
         android:elevation="3dp"
         android:ems="10"
         android:text="Registruotis"
         android:textColor="#FF009688"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
