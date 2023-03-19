@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.example.agrogidas.users.UsersM;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -22,6 +24,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.agrogidas.databinding.ActivityMainBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 startActivity(new Intent(MainActivity.this,MainActivity.class));
-
             }
         });
 
@@ -100,14 +102,18 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this,Kontakt.class );
                 startActivity(intent);
                 return true;
-
             case R.id.loginActivity:
+                FirebaseAuth.getInstance().signOut();
                 Intent intent1 = new Intent(MainActivity.this,loginActivity.class );
                 startActivity(intent1);
                 return true;
             case R.id.Paskyra:
-                Intent intent2 = new Intent(MainActivity.this,Account.class );
-                startActivity(intent2);
+                if (FirebaseAuth.getInstance().getCurrentUser() != null){
+                    Intent intent2 = new Intent(MainActivity.this,Account.class );
+                    startActivity(intent2);
+                } else {
+                    Toast.makeText(MainActivity.this, "Neprisijungęs",Toast.LENGTH_SHORT).show();
+                }
                 return true;
 
             default:
