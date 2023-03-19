@@ -21,16 +21,11 @@ public class Kontakt extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kontakt);
 
-
-
-
-
         //custom image for action bar start
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.home_bar_logo, null);
         getSupportActionBar().setCustomView(view);
-
         //custom image for action bar end
 
         logo = findViewById(R.id.logog);

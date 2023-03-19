@@ -23,7 +23,11 @@
 
     <include
         android:id="@+id/include"
-        layout="@layout/content_main" />
+        layout="@layout/content_main"
+        android:layout_width="400dp"
+        android:layout_height="1067dp"
+        app:layout_anchor="@+id/divider7"
+        app:layout_anchorGravity="center" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -56,16 +60,18 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="155dp"
+        android:layout_width="137dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="270dp"
+        android:layout_marginTop="140dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
         android:text="Pasirinkti..."
-        android:textSize="15sp"
         android:textColor="@color/gray"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2"/>
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -73,6 +79,7 @@
         android:layout_marginLeft="365dp"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:contentDescription="Markė"
         app:srcCompat="@mipmap/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,16 +110,18 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="205dp"
+        android:layout_width="137dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="270dp"
+        android:layout_marginTop="190dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
         android:text="Pasirinkti..."
-        android:textSize="15sp"
         android:textColor="@color/gray"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2"/>
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -120,6 +129,7 @@
         android:layout_marginLeft="365dp"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:contentDescription="Modelis"
         app:srcCompat="@mipmap/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -150,16 +160,18 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="255dp"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="270dp"
+        android:layout_marginTop="240dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
         android:text="Pasirinkti..."
-        android:textSize="15sp"
         android:textColor="@color/gray"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2"/>
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -167,6 +179,7 @@
         android:layout_marginLeft="365dp"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:contentDescription="Kederis"
         app:srcCompat="@mipmap/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -197,16 +210,18 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="305dp"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="270dp"
+        android:layout_marginTop="290dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
         android:text="Pasirinkti..."
-        android:textSize="15sp"
         android:textColor="@color/gray"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2"/>
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -214,6 +229,7 @@
         android:layout_marginLeft="365dp"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:contentDescription="Metai"
         app:srcCompat="@mipmap/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -244,16 +260,17 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="355dp"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="270dp"
+        android:layout_marginTop="340dp"
+        android:gravity="center_vertical"
         android:text="Pasirinkti..."
-        android:textSize="15sp"
         android:textColor="@color/gray"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2"/>
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -261,6 +278,7 @@
         android:layout_marginLeft="365dp"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:contentDescription="Kaina"
         app:srcCompat="@mipmap/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -289,25 +307,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider5"/>
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="405dp"
-        android:layout_marginLeft="270dp"
-        android:text="Pasirinkti..."
-        android:textSize="15sp"
-        android:textColor="@color/gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2"/>
-
     <ImageView
         android:id="@+id/imageView8"
         android:layout_marginTop="401dp"
         android:layout_marginLeft="365dp"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:contentDescription="Miestas"
         app:srcCompat="@mipmap/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -340,10 +346,21 @@
         android:layout_marginLeft="10dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="450dp"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/divider8"
         app:layout_constraintTop_toBottomOf="@+id/divider8"
         android:text="PAIEŠKA" />
 
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_marginTop="404dp"
+        android:layout_marginLeft="265dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:inputType="text"
+        android:hint="Įvesti"
+        android:textSize="15sp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

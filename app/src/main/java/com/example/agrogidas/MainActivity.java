@@ -9,11 +9,13 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
+import com.example.agrogidas.filters.KederisFilter;
+import com.example.agrogidas.filters.MarkeFilter;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -26,16 +28,18 @@ import com.example.agrogidas.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView logo;
+    private TextView txt1;
+    private TextView john;
+    private TextView txt2;
+    private TextView txt3;
+    private TextView txt4;
+    private TextView txt5;
+    private TextView txt6;
+    private TextView mark1;
+
+    private Button but;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-
-
-
-
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
         View view = inflater.inflate(R.layout.home_bar_logo, null);
         getSupportActionBar().setCustomView(view);
         //custom image for action bar end
+
+        //paspaudus logo numeta i pagrindi puslapi
         logo = findViewById(R.id.logog);
         logo.setOnClickListener(new View.OnClickListener()
         {
@@ -75,14 +81,62 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        //paspaudus logo numeta i pagrindi puslapi
 
+        //pasaudziamas tekstas "Pasirinkti..."
+        txt1 = findViewById(R.id.textView9);
+        txt1.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(MainActivity.this, MarkeFilter.class));
+            }
+        });
 
+        txt2 = findViewById(R.id.textView10);
+        txt2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Toast.makeText(getApplicationContext(),"Pirma pasirinkite Markę!!!",Toast.LENGTH_LONG).show();
+            }
+        });
 
+        txt3 = findViewById(R.id.textView11);
+        txt3.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(MainActivity.this, KederisFilter.class));
+            }
+        });
 
+        txt4 = findViewById(R.id.textView12);
+        txt4.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(MainActivity.this, MetaiFilter.class));
+            }
+        });
+        //pasaudziamas tekstas "Pasirinkti..."
 
+        //knopke ieskoti
+        but = findViewById(R.id.button);
+        but.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(MainActivity.this, PosterActivity.class));
 
-
-
+            }
+        });
+        //knopke ieskoti
     }
 
     @Override
@@ -109,8 +163,6 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
 
         }
-
-
     }
 
     @Override

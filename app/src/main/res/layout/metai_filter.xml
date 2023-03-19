@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MetaiFilter">
+
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <View
+        android:id="@+id/dividerxtralong"
+        android:layout_width="2dp"
+        android:layout_height="2000dp"
+        android:background="?android:attr/listDivider"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="METAI"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="@+id/divider1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/divider1"
+        app:layout_constraintTop_toTopOf="@+id/divider1" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="49dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1980"
+        android:layout_width="207dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1980"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="100dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1981"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="50dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1981"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="150dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1982"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="100dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1982"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="200dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1983"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="150dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1983"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="250dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1984"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="200dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1984"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="300dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1985"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="250dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1985"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="350dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1986"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="300dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1986"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="400dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1987"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="350dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1987"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="450dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1988"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="400dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1988"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="500dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1989"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="450dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1989"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="550dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1990"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="500dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1990"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="600dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1991"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="550dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1991"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="650dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1992"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="600dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1992"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="700dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1993"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="650dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1993"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="750dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1994"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="700dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1994"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="800dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1995"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="750dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1995"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="850dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1996"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="800dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1996"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="900dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/p1997"
+        android:layout_width="207dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="850dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="1997"
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
