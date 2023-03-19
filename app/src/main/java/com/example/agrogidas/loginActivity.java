@@ -50,6 +50,15 @@ public class loginActivity extends AppCompatActivity {
                 startActivity(new Intent(loginActivity.this,signupActivity.class));
             }
         });
+        //ner uz ka btw, zinau as genijus
+        forgot.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Toast.makeText(getApplicationContext(),"Tavo bėdos - man Kalėdos",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void loginUser() {
@@ -62,7 +71,7 @@ public class loginActivity extends AppCompatActivity {
             return;
         }
         if(TextUtils.isEmpty(userPassword)){
-            Toast.makeText(this,"Įrašykite slaptažodį",Toast.LENGTH_SHORT).show();
+
             return;
         }
         //user login
