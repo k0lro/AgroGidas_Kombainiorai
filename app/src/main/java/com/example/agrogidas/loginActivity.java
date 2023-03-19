@@ -84,7 +84,7 @@ public class loginActivity extends AppCompatActivity {
                             startActivity(new Intent(loginActivity.this, MainActivity.class));
                         }
                         else{
-                            Toast.makeText(loginActivity.this, "Tokios el. pašto ir slaptažodžio kombinacijos nėra"+task.isSuccessful(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(loginActivity.this, "Tokios el. pašto ir slaptažodžio kombinacijos nėra",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
