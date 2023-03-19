@@ -104,10 +104,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.loginActivity:
                 Intent intent1 = new Intent(MainActivity.this,loginActivity.class );
                 startActivity(intent1);
-
-                case R.id.Paskyra:
+                return true;
+            case R.id.Paskyra:
                 Intent intent2 = new Intent(MainActivity.this,Account.class );
                 startActivity(intent2);
+                return true;
 
             default:
                 return super.onOptionsItemSelected(item);
