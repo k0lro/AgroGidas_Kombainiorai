@@ -2,7 +2,7 @@ package com.example.agrogidas.users;
 
 public class UsersM {
 
-    String name, sname, email, passwd;
+    public String name, sname, email, passwd;
 
     public UsersM(){
     }
@@ -45,4 +45,5 @@ public class UsersM {
     public void setPasswd(String passwd) {
         this.passwd = passwd;
     }
+
 }
