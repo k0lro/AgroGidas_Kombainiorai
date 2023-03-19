@@ -54,7 +54,7 @@ public class Account extends AppCompatActivity {
             }
         });
         user = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("Users");
+        reference = FirebaseDatabase.getInstance().getReference("UserM");
         userID = user.getUid();
 
         final TextView FullName = (TextView) findViewById(R.id.namee);

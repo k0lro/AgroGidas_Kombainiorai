@@ -33,9 +33,10 @@
         android:ems="10"
         android:minHeight="30dp"
         android:padding="13dp"
+        android:text="Slaptazodis"
         app:layout_constraintEnd_toEndOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/snamee"
         />
 
     <TextView
@@ -46,9 +47,10 @@
         android:ems="10"
         android:minHeight="30dp"
         android:padding="13dp"
+        android:text="Pastas"
         app:layout_constraintEnd_toEndOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordd" />
 
     <TextView
         android:id="@+id/snamee"
@@ -58,7 +60,8 @@
         android:ems="10"
         android:minHeight="30dp"
         android:padding="13dp"
+        android:text="Pavarde"
         app:layout_constraintEnd_toEndOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/namee" />
 </androidx.constraintlayout.widget.ConstraintLayout>
