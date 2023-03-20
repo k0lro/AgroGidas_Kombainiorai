@@ -94,9 +94,8 @@ public class loginActivity extends AppCompatActivity {
                             Toast.makeText(loginActivity.this, "Prisijungta sėkmingai!",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(loginActivity.this, MainActivity.class));}
                             else {
-                                Toast.makeText(loginActivity.this, "Patikrinkite elektroninį paštą",Toast.LENGTH_LONG).show();
-
-
+                                Toast.makeText(loginActivity.this, "Nepatvirtintas elektroninis paštas",Toast.LENGTH_LONG).show();
+                                FirebaseAuth.getInstance().getCurrentUser().sendEmailVerification();
                             }
                         }
                         else{

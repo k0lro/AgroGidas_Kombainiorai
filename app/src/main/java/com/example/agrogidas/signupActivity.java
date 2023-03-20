@@ -88,7 +88,7 @@ public class signupActivity extends AppCompatActivity {
                         if(task.isSuccessful()) {
                             UsersM user = new UsersM(userName, userSName, userEmail, userPassword);
                             String id = task.getResult().getUser().getUid();
-                            database.getReference().child("NormalUsers").child(id).setValue(user);
+                            database.getReference().child("Admins").child(id).setValue(user);
 
                             Toast.makeText(signupActivity.this, "Registracija įvykdyta", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(signupActivity.this,loginActivity.class));
