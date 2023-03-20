@@ -33,6 +33,9 @@
             android:name=".PosterActivity"
             android:exported="false" />
         <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
             android:name=".Kontakt"
             android:exported="true" />
         <activity
