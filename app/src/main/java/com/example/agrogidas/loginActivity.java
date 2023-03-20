@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class loginActivity extends AppCompatActivity {
 
@@ -23,6 +24,7 @@ public class loginActivity extends AppCompatActivity {
     TextView signUp, forgot;
     EditText email, passwd;
     FirebaseAuth auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,16 +52,21 @@ public class loginActivity extends AppCompatActivity {
                 startActivity(new Intent(loginActivity.this,signupActivity.class));
             }
         });
-        //ner uz ka btw, zinau as genijus
-        forgot.setOnClickListener(new View.OnClickListener()
-        {
+
+        //Mygtukas "pramiršote slaptažodį" nukreipia į naują puslapį
+        //Forgot Password
+        forgot.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                Toast.makeText(getApplicationContext(),"Tavo bėdos - man Kalėdos",Toast.LENGTH_LONG).show();
+            public void onClick(View view) {
+                startActivity(new Intent(loginActivity.this, ForgotPassword.class));
+
             }
         });
+
+
     }
+
+
 
     private void loginUser() {
 
@@ -71,7 +78,7 @@ public class loginActivity extends AppCompatActivity {
             return;
         }
         if(TextUtils.isEmpty(userPassword)){
-
+            Toast.makeText(this,"Įrašykite slaptažodį",Toast.LENGTH_SHORT).show();
             return;
         }
         //user login
@@ -80,14 +87,26 @@ public class loginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+                            //Pridėtas el pašto tvirtinimas. Jeigu jis nėra patvirtintas, išmetama error žinutė
+                            //Jeigu viskas sėkminga, naudotojas nukreipiamas į pagrindinį puslapį
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            if(user.isEmailVerified()){
                             Toast.makeText(loginActivity.this, "Prisijungta sėkmingai!",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(loginActivity.this, MainActivity.class));
+                            startActivity(new Intent(loginActivity.this, MainActivity.class));}
+                            else {
+                                Toast.makeText(loginActivity.this, "Patikrinkite elektroninį paštą",Toast.LENGTH_LONG).show();
+
+
+                            }
                         }
                         else{
-                            Toast.makeText(loginActivity.this, "Tokios el. pašto ir slaptažodžio kombinacijos nėra",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(loginActivity.this, "Tokios el. pašto ir slaptažodžio kombinacijos nėra"+task.isSuccessful(),Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
 
     }
+
+
+
 }
