@@ -81,6 +81,8 @@ public class signupActivity extends AppCompatActivity {
             return;
         }
         //nauju user'iu sukurimas
+        //...............................................
+        //
         auth.createUserWithEmailAndPassword(userEmail,userPassword)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
