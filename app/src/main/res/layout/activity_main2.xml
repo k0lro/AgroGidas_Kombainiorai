@@ -154,7 +154,7 @@
         app:layout_constraintStart_toStartOf="@+id/divider1"
         app:layout_constraintTop_toBottomOf="@+id/divider1"
         app:srcCompat="@mipmap/check"
-        app:tint="@color/brightGray" />
+        app:tint="@color/brightGray"/>
 
     <TextView
         android:id="@+id/raides8_txt"
