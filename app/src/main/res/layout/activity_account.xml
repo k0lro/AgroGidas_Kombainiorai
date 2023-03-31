@@ -132,4 +132,18 @@
         app:layout_constraintEnd_toEndOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/emaill"/>
+
+    <Button
+        android:id="@+id/buttonReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF009688"
+        android:text="Pakeisti slaptažodį"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emaill"
+        android:textColor="@color/black"
+        android:layout_marginTop="45dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

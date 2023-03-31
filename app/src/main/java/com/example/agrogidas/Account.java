@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +31,8 @@ public class Account extends AppCompatActivity {
     private String userID;
     private ImageView logo;
 
+    Button change;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +49,18 @@ public class Account extends AppCompatActivity {
         //custom image for action bar end
 
         logo = findViewById(R.id.logog);
+        change = findViewById(R.id.buttonReg);
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Account.this, MainActivity.class));
+
+            }
+        });
+        change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Account.this, ChangePassword.class));
 
             }
         });
