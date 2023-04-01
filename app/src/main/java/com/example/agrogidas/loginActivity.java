@@ -24,7 +24,6 @@ public class loginActivity extends AppCompatActivity {
     TextView signUp, forgot;
     EditText email, passwd;
     FirebaseAuth auth;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +61,7 @@ public class loginActivity extends AppCompatActivity {
 
             }
         });
+
 
 
     }
