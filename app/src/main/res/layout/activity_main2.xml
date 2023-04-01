@@ -91,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
-        android:backgroundTint="#FF009688"
+        android:backgroundTint="@color/invalid"
         android:hint="REGISTRUOTIS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,7 +154,7 @@
         app:layout_constraintStart_toStartOf="@+id/divider1"
         app:layout_constraintTop_toBottomOf="@+id/divider1"
         app:srcCompat="@mipmap/check"
-        app:tint="@color/brightGray" />
+        app:tint="@color/brightGray"/>
 
     <TextView
         android:id="@+id/raides8_txt"
