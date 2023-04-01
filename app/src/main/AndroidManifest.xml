@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AgroGidas"
         tools:targetApi="31">
         <activity
+            android:name=".ChangePassword"
+            android:exported="false" />
+        <activity
             android:name=".short_ad"
             android:exported="false" />
         <activity
