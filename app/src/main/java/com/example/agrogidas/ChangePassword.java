@@ -68,51 +68,57 @@ public class ChangePassword extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("NormalUsers");
         userID = user.getUid();
-        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                UsersM userProfile = snapshot.getValue(UsersM.class);
-                if (userProfile != null)
-                {
-                    AuthCredential credential = EmailAuthProvider.getCredential(userProfile.email, userPassword);
-                    user.reauthenticate(credential)
-                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if(task.isSuccessful()) {
-                                        user.updatePassword(newPassword)
-                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                    @Override
-                                                    public void onComplete(@NonNull Task<Void> task) {
-                                                        if(task.isSuccessful()) {
-                                                            Toast.makeText(ChangePassword.this,"Slaptažodis pakeistas",Toast.LENGTH_SHORT).show();
-                                                            UsersM userm = new UsersM(userProfile.name, userProfile.sname, userProfile.email, newPassword);
-                                                            database.getReferenceFromUrl("https://agrogidas-f3013-default-rtdb.europe-west1.firebasedatabase.app/").child("NormalUsers").child(userID).setValue(userm);
-                                                            startActivity(new Intent(ChangePassword.this, Account.class));
+        if(!userPassword.equals(newPassword))
+        {
+            reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    UsersM userProfile = snapshot.getValue(UsersM.class);
+                    if (userProfile != null)
+                    {
+                        AuthCredential credential = EmailAuthProvider.getCredential(userProfile.email, userPassword);
+                        user.reauthenticate(credential)
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful()) {
+                                            user.updatePassword(newPassword)
+                                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                        @Override
+                                                        public void onComplete(@NonNull Task<Void> task) {
+                                                            if(task.isSuccessful()) {
+                                                                Toast.makeText(ChangePassword.this,"Slaptažodis pakeistas",Toast.LENGTH_SHORT).show();
+                                                                UsersM userm = new UsersM(userProfile.name, userProfile.sname, userProfile.email, newPassword);
+                                                                database.getReferenceFromUrl("https://agrogidas-f3013-default-rtdb.europe-west1.firebasedatabase.app/").child("NormalUsers").child(userID).setValue(userm);
+                                                                startActivity(new Intent(ChangePassword.this, Account.class));
+                                                            }
+                                                            else{
+                                                                Toast.makeText(ChangePassword.this,"Nepavyko pakeisti slaptažodžio!",Toast.LENGTH_SHORT).show();
+                                                                return;
+                                                            }
                                                         }
-                                                        else{
-                                                            Toast.makeText(ChangePassword.this,"Nepavyko pakeisti slaptažodžio!",Toast.LENGTH_SHORT).show();
-                                                            return;
-                                                        }
-                                                    }
-                                                });
-                                    }
-                                    else{
-                                        Toast.makeText(ChangePassword.this,"Įvestas blogas senas slaptažodis",Toast.LENGTH_SHORT).show();
-                                        return;
-                                    }
+                                                    });
+                                        }
+                                        else{
+                                            Toast.makeText(ChangePassword.this,"Įvestas blogas senas slaptažodis",Toast.LENGTH_SHORT).show();
+                                            return;
+                                        }
 
-                                }
-                            });
+                                    }
+                                });
+                    }
                 }
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    Toast.makeText(ChangePassword.this, "Klaida", Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+        else{
+            Toast.makeText(ChangePassword.this,"Naujas slaptažodis atitinka seną",Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(ChangePassword.this, "Klaida", Toast.LENGTH_LONG).show();
-            }
-        });
 
 
 
