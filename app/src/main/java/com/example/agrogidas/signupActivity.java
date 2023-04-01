@@ -102,45 +102,56 @@ public class signupActivity extends AppCompatActivity {
         //8 skaiciai
         if(password.length() <= 8)
         {
-            raides8_txt.setTextColor(Color.LTGRAY);
-            raides8_img.setColorFilter(Color.LTGRAY);
+            raides8_txt.setTextColor(getResources().getColor(R.color.brightGray));
+            raides8_img.setColorFilter(getResources().getColor(R.color.brightGray));
             simb8 = false;
         }
         else
         {
-            raides8_txt.setTextColor(Color.GREEN);
-            raides8_img.setColorFilter(Color.GREEN);
+            raides8_txt.setTextColor(getResources().getColor(R.color.teal_900));
+            raides8_img.setColorFilter(getResources().getColor(R.color.teal_900));
             simb8 = true;
         }
 
         //didziosiom
         if(!upperCase.matcher(password).find())
         {
-            didzioji_txt.setTextColor(Color.LTGRAY);
-            didzioji_img.setColorFilter(Color.LTGRAY);
+            didzioji_txt.setTextColor(getResources().getColor(R.color.brightGray));
+            didzioji_img.setColorFilter(getResources().getColor(R.color.brightGray));
             didzraid = false;
         }
         else
         {
-            didzioji_txt.setTextColor(Color.GREEN);
-            didzioji_img.setColorFilter(Color.GREEN);
+            didzioji_txt.setTextColor(getResources().getColor(R.color.teal_900));
+            didzioji_img.setColorFilter(getResources().getColor(R.color.teal_900));
             didzraid = true;
         }
         //skaiciam
         if(!numberCase.matcher(password).find())
         {
-            skaicius_txt.setTextColor(Color.LTGRAY);
-            skaicius_img.setColorFilter(Color.LTGRAY);
-            didzraid = false;
+            skaicius_txt.setTextColor(getResources().getColor(R.color.brightGray));
+            skaicius_img.setColorFilter(getResources().getColor(R.color.brightGray));
+            skaic = false;
         }
         else
         {
-            skaicius_txt.setTextColor(Color.GREEN);
-            skaicius_img.setColorFilter(Color.GREEN);
-            didzraid = true;
+            skaicius_txt.setTextColor(getResources().getColor(R.color.teal_900));
+            skaicius_img.setColorFilter(getResources().getColor(R.color.teal_900));
+            skaic = true;
         }
 
+    allChecked();
+    }
 
+    public void allChecked(){
+        if(simb8 && didzraid && skaic)
+        {
+            regist.setBackgroundColor(getResources().getColor(R.color.teal_900));
+        }
+        else
+        {
+            regist.setBackgroundColor(getResources().getColor(R.color.invalid));
+        }
     }
 
     private void createUser() {
