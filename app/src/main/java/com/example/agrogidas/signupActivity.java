@@ -65,7 +65,7 @@ public class signupActivity extends AppCompatActivity {
                 startActivity(new Intent(signupActivity.this,loginActivity.class));
             }
         });
-
+        regist.setEnabled(false);
         //SLAPTAZODZIO REIKALAVIMU STUFF
         raides8_img = findViewById(R.id.raides8_img);
         didzioji_img = findViewById(R.id.didzioji_img);
@@ -140,13 +140,14 @@ public class signupActivity extends AppCompatActivity {
             skaic = true;
         }
 
-    allChecked();
+        allChecked();
     }
 
     public void allChecked(){
         if(simb8 && didzraid && skaic)
         {
             regist.setBackgroundColor(getResources().getColor(R.color.teal_900));
+            regist.setEnabled(true);
         }
         else
         {
@@ -175,9 +176,8 @@ public class signupActivity extends AppCompatActivity {
             Toast.makeText(this,"Įrašykite slaptažodį",Toast.LENGTH_SHORT).show();
             return;
         }
+
         //nauju user'iu sukurimas
-        //...............................................
-        //
         auth.createUserWithEmailAndPassword(userEmail,userPassword)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -187,11 +187,13 @@ public class signupActivity extends AppCompatActivity {
                             String id = task.getResult().getUser().getUid();
                             database.getReference().child("NormalUsers").child(id).setValue(user);
 
-                            Toast.makeText(signupActivity.this, "Registracija įvykdyta", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(signupActivity.this, "Registracija įvykdyta",
+                                           Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(signupActivity.this,loginActivity.class));
                         }
                         else{
-                            Toast.makeText(signupActivity.this, "Registracija nepavyko" + task.getException(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(signupActivity.this, "Registracija nepavyko" +
+                                            task.getException(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
