@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/modelis" />
+        app:layout_constraintTop_toTopOf="@+id/modelisid" />
 
     <View
         android:layout_width="match_parent"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/marke"
+        android:id="@+id/markeid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -90,7 +90,7 @@
         app:layout_constraintVertical_bias="0.307" />
 
     <TextView
-        android:id="@+id/modelis"
+        android:id="@+id/modelisid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -100,7 +100,7 @@
         android:textSize="23dp"
         android:textColor="@color/teal_200"
         app:layout_constraintBottom_toTopOf="@+id/pagrindine_foto"
-        app:layout_constraintStart_toEndOf="@+id/marke"
+        app:layout_constraintStart_toEndOf="@+id/markeid"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.321" />
 
@@ -116,7 +116,7 @@
         app:layout_constraintTop_toBottomOf="@+id/viewtop" />
 
     <TextView
-        android:id="@+id/kaina"
+        android:id="@+id/kainaid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -129,7 +129,7 @@
         app:layout_constraintTop_toBottomOf="@+id/kaina_txt" />
 
     <TextView
-        android:id="@+id/numeris"
+        android:id="@+id/numerisid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -142,7 +142,7 @@
         app:layout_constraintTop_toBottomOf="@+id/viewtop" />
 
     <TextView
-        android:id="@+id/miestas"
+        android:id="@+id/miestasid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
@@ -150,7 +150,7 @@
         android:text="Miestas"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numeris" />
+        app:layout_constraintTop_toBottomOf="@+id/numerisid" />
 
     <TextView
         android:id="@+id/pagaminimo_data"
@@ -165,7 +165,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
-        android:id="@+id/data"
+        android:id="@+id/dataid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2023"
@@ -188,14 +188,14 @@
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
-        android:id="@+id/galia_ag"
+        android:id="@+id/galiaid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:text="420 AG"
         android:textSize="16dp"
         app:layout_constraintStart_toEndOf="@+id/galingumo_txt"
-        app:layout_constraintTop_toTopOf="@+id/data" />
+        app:layout_constraintTop_toTopOf="@+id/dataid" />
 
     <ImageView
         android:id="@+id/galia_logo"
@@ -242,7 +242,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <TextView
-        android:id="@+id/darbinis_plotis"
+        android:id="@+id/darbinis_plotisid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -266,14 +266,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="84dp"
         android:text="Motovalandos:"
         android:textColor="@color/brightGray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <TextView
-        android:id="@+id/valandos"
+        android:id="@+id/motovalandosid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -293,12 +293,12 @@
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/aprasymasid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cia bus aprasymas"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="5dp"
+        android:text="Cia bus aprasymas"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3" />
 

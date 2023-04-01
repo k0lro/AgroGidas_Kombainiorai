@@ -16,7 +16,7 @@ import com.example.agrogidas.users.Kombainai;
 
 import java.util.List;
 
-public class short_ad_adapter extends RecyclerView.Adapter<short_ad_adapter.ViewHolder>{
+public class  short_ad_adapter extends RecyclerView.Adapter<short_ad_adapter.ViewHolder>{
 
     Context context;
     List<Kombainai> list;
@@ -45,7 +45,7 @@ public class short_ad_adapter extends RecyclerView.Adapter<short_ad_adapter.View
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context,short_ad.class);
+                Intent intent = new Intent(context,full_ad.class);
                 context.startActivity(intent);
             }
         });

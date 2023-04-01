@@ -9,11 +9,19 @@ public class Kombainai {
     int kaina;
     String nuotrauka;
 
+    String telefonas;
+
+    String miestas;
+    int galia;
+    int motovalandos;
+
     public Kombainai(){
 
     }
 
-    public Kombainai(String marke, String modelis, int darbinis_plotis, int metai, String aprasas, int kaina, String nuotrauka) {
+    public Kombainai(String marke, String modelis, int darbinis_plotis, int metai, String aprasas,
+                     int kaina, String nuotrauka, String telefonas, String miestas, int galia,
+                     int motovalandos) {
         this.marke = marke;
         this.modelis = modelis;
         this.darbinis_plotis = darbinis_plotis;
@@ -21,6 +29,10 @@ public class Kombainai {
         this.aprasas = aprasas;
         this.kaina = kaina;
         this.nuotrauka = nuotrauka;
+        this.telefonas = telefonas;
+        this.miestas = miestas;
+        this.galia = galia;
+        this.motovalandos = motovalandos;
     }
 
     public String getMarke() {
@@ -78,4 +90,20 @@ public class Kombainai {
     public void setNuotrauka(String nuotrauka) {
         this.nuotrauka = nuotrauka;
     }
+
+    public String getTelefonas() { return telefonas; }
+
+    public void setTelefonas(String telefonas) { this.telefonas = telefonas; }
+
+    public String getMiestas() { return miestas; }
+
+    public void setMiestas(String miestas) { this.miestas = miestas; }
+
+    public int getGalia() { return galia; }
+
+    public void setGalia(int galia) { this.galia = galia; }
+
+    public int getMotovalandos() { return motovalandos; }
+
+    public void setMotovalandos(int motovalandos) { this.motovalandos = motovalandos; }
 }
