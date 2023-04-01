@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AgroGidas"
         tools:targetApi="31">
         <activity
+            android:name=".full_ad"
+            android:exported="true" />
+        <activity
             android:name=".short_ad_activity"
             android:exported="true" />
         <activity
@@ -20,27 +23,6 @@
         <activity
             android:name=".short_ad"
             android:exported="true" />
-        <activity
-            android:name=".filters.KederisFilter"
-            android:exported="false" />
-        <activity
-            android:name=".filters.ClasModels"
-            android:exported="false" />
-        <activity
-            android:name=".filters.NewHollandModels"
-            android:exported="false" />
-        <activity
-            android:name=".filters.NivaModels"
-            android:exported="false" />
-        <activity
-            android:name=".filters.JohnModels"
-            android:exported="false" />
-        <activity
-            android:name=".filters.MarkeFilter"
-            android:exported="false" />
-        <activity
-            android:name=".PosterActivity"
-            android:exported="false" />
         <activity
             android:name=".ForgotPassword"
             android:exported="false" />
