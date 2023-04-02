@@ -6,10 +6,14 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.example.agrogidas.users.Kombainai;
 
 public class full_ad extends AppCompatActivity {
 
@@ -18,9 +22,7 @@ public class full_ad extends AppCompatActivity {
     TextView markeid, modelisid, kainaid, numerisid, miestasid, dataid, galiaid, darbinis_plotisid,
             motovalandosid, aprasymasid;
     ImageView pagrindine_foto;
-
-
-
+    Kombainai kombainai = null;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,10 @@ public class full_ad extends AppCompatActivity {
         });
 
         final Object object = getIntent().getSerializableExtra("detail");
+        if(object instanceof Kombainai){
+            kombainai = (Kombainai) object;
+            Log.d("full_ad", "Received Kombainai object: " + kombainai);
+        }
 
         pagrindine_foto = findViewById(R.id.pagrindine_foto);
         markeid = findViewById(R.id.markeid);
@@ -59,5 +65,19 @@ public class full_ad extends AppCompatActivity {
         motovalandosid = findViewById(R.id.motovalandosid);
         aprasymasid = findViewById(R.id.aprasymasid);
 
+        if(kombainai != null)
+        {
+            Glide.with(getApplicationContext()).load(kombainai.getNuotrauka()).into(pagrindine_foto);
+            markeid.setText(kombainai.getMarke());
+            modelisid.setText(kombainai.getModelis());
+            kainaid.setText(String.valueOf(kombainai.getKaina() + " €"));
+            numerisid.setText(String.valueOf(kombainai.getTelefonas()));
+            miestasid.setText(kombainai.getMiestas());
+            dataid.setText(String.valueOf(kombainai.getMetai()));
+            galiaid.setText(String.valueOf(kombainai.getGalia()));
+            darbinis_plotisid.setText(String.valueOf(kombainai.getDarbinis_plotis()));
+            motovalandosid.setText(String.valueOf(kombainai.getMotovalandos()));
+            aprasymasid.setText(kombainai.getAprasas());
+        }
     }
 }

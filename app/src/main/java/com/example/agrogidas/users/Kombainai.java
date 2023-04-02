@@ -1,6 +1,8 @@
 package com.example.agrogidas.users;
 
-public class Kombainai {
+import java.io.Serializable;
+
+public class Kombainai implements Serializable {
     String marke;
     String modelis;
     int darbinis_plotis;

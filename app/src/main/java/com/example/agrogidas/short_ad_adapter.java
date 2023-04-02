@@ -1,5 +1,6 @@
 package com.example.agrogidas;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -35,7 +36,7 @@ public class  short_ad_adapter extends RecyclerView.Adapter<short_ad_adapter.Vie
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Glide.with(context).load(list.get(position).getNuotrauka()).into(holder.imageView);
         holder.name.setText(String.valueOf(list.get(position).getMarke()));
@@ -45,7 +46,9 @@ public class  short_ad_adapter extends RecyclerView.Adapter<short_ad_adapter.Vie
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context,full_ad.class);
+
+                Intent intent = new Intent(context, full_ad.class);
+                intent.putExtra("detail",list.get(position));
                 context.startActivity(intent);
             }
         });
