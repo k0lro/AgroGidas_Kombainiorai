@@ -50,7 +50,6 @@ public class full_ad extends AppCompatActivity {
         final Object object = getIntent().getSerializableExtra("detail");
         if(object instanceof Kombainai){
             kombainai = (Kombainai) object;
-            Log.d("full_ad", "Received Kombainai object: " + kombainai);
         }
 
         pagrindine_foto = findViewById(R.id.pagrindine_foto);

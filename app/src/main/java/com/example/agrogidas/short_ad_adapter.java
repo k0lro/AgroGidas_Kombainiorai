@@ -44,6 +44,7 @@ public class  short_ad_adapter extends RecyclerView.Adapter<short_ad_adapter.Vie
         holder.year.setText(String.valueOf(list.get(position).getMetai()));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
