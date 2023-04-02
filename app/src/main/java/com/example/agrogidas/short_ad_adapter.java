@@ -40,8 +40,8 @@ public class  short_ad_adapter extends RecyclerView.Adapter<short_ad_adapter.Vie
 
         Glide.with(context).load(list.get(position).getNuotrauka()).into(holder.imageView);
         holder.name.setText(String.valueOf(list.get(position).getMarke()));
-        holder.price.setText(String.valueOf(list.get(position).getKaina()));
-        holder.year.setText(String.valueOf(list.get(position).getMetai()));
+        holder.price.setText(String.valueOf(list.get(position).getKaina())+"€");
+        holder.year.setText(String.valueOf(list.get(position).getMetai())+"m.");
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
 
