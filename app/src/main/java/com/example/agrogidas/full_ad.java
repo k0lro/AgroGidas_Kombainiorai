@@ -43,7 +43,7 @@ public class full_ad extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(full_ad.this,MainActivity.class));
+                startActivity(new Intent(full_ad.this,short_ad_activity.class));
             }
         });
 
