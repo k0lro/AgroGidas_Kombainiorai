@@ -12,24 +12,43 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.agrogidas.users.Kombainai;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.agrogidas.databinding.ActivityMainBinding;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
 
     private ImageView logo;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     private Button iksd;
+    FirebaseFirestore firestore;
+
+    short_ad_adapter short_ad_adapter;
+    List<Kombainai> kombainais;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +64,15 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.loginActivity, R.id.nav_slideshow)
-                .setOpenableLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+
+
+
+
+
+
+
+
+
 
         //custom image for action bar start
         getSupportActionBar().setDisplayShowCustomEnabled(true);
@@ -71,7 +92,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //paspaudus logo numeta i pagrindi puslapi
+
+        firestore = FirebaseFirestore.getInstance();
+
+        RecyclerView recyclerView = findViewById(R.id.mainminiskelb);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        kombainais = new ArrayList<>();
+        short_ad_adapter = new short_ad_adapter(this,kombainais);
+        recyclerView.setAdapter(short_ad_adapter);
+        firestore.collection("Kombainai").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                for (DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
+                    Kombainai kombainai = documentSnapshot.toObject(Kombainai.class);
+                    kombainais.add(kombainai);
+                    short_ad_adapter.notifyDataSetChanged();
+                }
+            }
+        });
+
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -79,6 +123,9 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
         return true;
     }
+
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
