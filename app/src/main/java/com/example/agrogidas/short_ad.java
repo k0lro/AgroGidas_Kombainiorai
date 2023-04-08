@@ -11,6 +11,7 @@ import android.view.View;
 
 public class short_ad extends AppCompatActivity {
 
+    //fragmentas
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
