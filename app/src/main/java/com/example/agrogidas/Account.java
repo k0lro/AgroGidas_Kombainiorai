@@ -31,7 +31,7 @@ public class Account extends AppCompatActivity {
     private String userID;
     private ImageView logo;
 
-    Button change;
+    Button change, changeEm;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -49,7 +49,8 @@ public class Account extends AppCompatActivity {
         //custom image for action bar end
 
         logo = findViewById(R.id.logog);
-        change = findViewById(R.id.buttonReg);
+        change = findViewById(R.id.buttonChangePass);
+        changeEm = findViewById(R.id.buttonChange2);
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +62,13 @@ public class Account extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Account.this, ChangePassword.class));
+
+            }
+        });
+        changeEm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Account.this, ChangeEmail.class));
 
             }
         });

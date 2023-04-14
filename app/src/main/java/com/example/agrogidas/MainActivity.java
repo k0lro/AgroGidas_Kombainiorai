@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         //paspaudus logo numeta i pagrindi puslapi
         logo = findViewById(R.id.logog);
+
         logo.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -135,18 +136,19 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this,Kontakt.class );
                 startActivity(intent);
                 return true;
-            case R.id.loginActivity:
-                FirebaseAuth.getInstance().signOut();
-                Intent intent1 = new Intent(MainActivity.this,loginActivity.class );
-                startActivity(intent1);
-                return true;
+
             case R.id.Paskyra:
                 if (FirebaseAuth.getInstance().getCurrentUser() != null){
-                    Intent intent2 = new Intent(MainActivity.this,Account.class );
-                    startActivity(intent2);
+                    Intent intent1 = new Intent(MainActivity.this,Account.class );
+                    startActivity(intent1);
                 } else {
                     Toast.makeText(MainActivity.this, "Neprisijungęs",Toast.LENGTH_SHORT).show();
                 }
+                return true;
+            case R.id.loginActivity:
+                FirebaseAuth.getInstance().signOut();
+                Intent intent2 = new Intent(MainActivity.this,loginActivity.class );
+                startActivity(intent2);
                 return true;
 
             default:
