@@ -3,14 +3,18 @@ package com.example.agrogidas;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.Handler;
 
 import com.example.agrogidas.users.Kombainai;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -149,12 +153,36 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent2 = new Intent(MainActivity.this,loginActivity.class );
                 startActivity(intent2);
+                CreatepopUpwindow();
                 return true;
 
             default:
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    private void CreatepopUpwindow() {
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View popUpView=inflater.inflate(R.layout.activity_goodbye,null);
+        int width=ViewGroup.LayoutParams.MATCH_PARENT;
+        int height=ViewGroup.LayoutParams.WRAP_CONTENT;
+        boolean focusable=true;
+        PopupWindow popupWindow=new PopupWindow(popUpView,width,height,focusable);
+        new Handler().post(new Runnable(){
+            @Override
+            public void run() {
+                popupWindow.showAtLocation(popUpView, Gravity.BOTTOM,0,0);
+            }
+        });
+        TextView gotit;
+        gotit=popUpView.findViewById(R.id.gotit);
+        gotit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popupWindow.dismiss();
+            }
+        });
     }
 
     @Override
