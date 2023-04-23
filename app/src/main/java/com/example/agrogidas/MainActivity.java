@@ -1,6 +1,7 @@
 package com.example.agrogidas;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -22,6 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -150,9 +152,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return true;
             case R.id.loginActivity:
-                FirebaseAuth.getInstance().signOut();
-                Intent intent2 = new Intent(MainActivity.this,loginActivity.class );
-                startActivity(intent2);
                 CreatepopUpwindow();
                 return true;
 
@@ -180,6 +179,9 @@ public class MainActivity extends AppCompatActivity {
         gotit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(MainActivity.this, loginActivity.class);
+                startActivity(intent);
                 popupWindow.dismiss();
             }
         });
