@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AgroGidas"
         tools:targetApi="31">
         <activity
+            android:name=".Informacija"
+            android:exported="false" />
+        <activity
             android:name=".ChangeEmail"
             android:exported="false" />
         <activity
