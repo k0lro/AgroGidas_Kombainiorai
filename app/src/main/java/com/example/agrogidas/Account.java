@@ -5,6 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -32,6 +35,30 @@ public class Account extends AppCompatActivity {
     private ImageView logo;
 
     Button change, changeEm;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.universalusmenu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item1:
+                Intent intent2 = new Intent(Account.this, Informacija.class );
+                startActivity(intent2);
+                return true;
+            case R.id.item2:
+                Intent intent = new Intent(Account.this,loginActivity.class );
+                startActivity(intent);
+                return true;
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -106,6 +133,9 @@ public class Account extends AppCompatActivity {
                 Toast.makeText(Account.this, "Klaida", Toast.LENGTH_LONG).show();
             }
         });
+
+
+
 
 
     }
