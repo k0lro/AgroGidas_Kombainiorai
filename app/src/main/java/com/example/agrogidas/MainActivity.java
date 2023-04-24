@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
+        getMenuInflater().inflate(R.menu.universalusmenu, menu);
         return true;
     }
 
@@ -140,12 +140,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
         {
-            case R.id.menukontaktai:
-                Intent intent = new Intent(MainActivity.this,Kontakt.class );
-                startActivity(intent);
+            case R.id.item1:
+                Intent intent2 = new Intent(MainActivity.this, Informacija.class );
+                startActivity(intent2);
                 return true;
 
-            case R.id.Paskyra:
+            case R.id.item3:
                 if (FirebaseAuth.getInstance().getCurrentUser() != null){
                     Intent intent1 = new Intent(MainActivity.this,Account.class );
                     startActivity(intent1);
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Neprisijungęs",Toast.LENGTH_SHORT).show();
                 }
                 return true;
-            case R.id.loginActivity:
+            case R.id.item2:
                 CreatepopUpwindow();
                 return true;
 
