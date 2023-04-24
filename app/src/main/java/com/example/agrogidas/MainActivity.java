@@ -16,6 +16,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Handler;
+import android.widget.Toolbar;
 
 import com.example.agrogidas.users.Kombainai;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.home_bar_logo, null);
         getSupportActionBar().setCustomView(view);
+
         //custom image for action bar end
 
         //paspaudus logo numeta i pagrindi puslapi
