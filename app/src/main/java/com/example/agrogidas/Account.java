@@ -105,7 +105,6 @@ public class Account extends AppCompatActivity {
 
         final TextView FullName = (TextView) findViewById(R.id.namee);
         final TextView SurName = (TextView) findViewById(R.id.snamee);
-        final TextView Password = (TextView) findViewById(R.id.passwordd);
         final TextView Email = (TextView) findViewById(R.id.emaill);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -122,7 +121,6 @@ public class Account extends AppCompatActivity {
 
                     FullName.setText(name);
                     SurName.setText(sname);
-                    Password.setText(password);
                     Email.setText(email);
                 }
 
