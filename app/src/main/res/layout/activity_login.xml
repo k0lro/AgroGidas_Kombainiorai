@@ -19,6 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prisijungti"
+        android:focusable="false"
         android:layout_marginTop="45dp"
         android:background="@drawable/edittext_background"
         android:elevation="3dp"
