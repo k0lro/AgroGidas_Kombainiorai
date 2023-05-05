@@ -57,79 +57,72 @@ public class MainActivity extends AppCompatActivity {
 
         List<Kombainai> kombainais;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-            binding = ActivityMainBinding.inflate(getLayoutInflater());
-            setContentView(binding.getRoot());
+        setSupportActionBar(binding.appBarMain.toolbar);
 
-            setSupportActionBar(binding.appBarMain.toolbar);
+        DrawerLayout drawer = binding.drawerLayout;
+        NavigationView navigationView = binding.navView;
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
 
-            DrawerLayout drawer = binding.drawerLayout;
-            NavigationView navigationView = binding.navView;
-            // Passing each menu ID as a set of Ids because each
-            // menu should be considered as top level destinations.
+        //custom image for action bar start
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.home_bar_logo, null);
+        getSupportActionBar().setCustomView(view);
+        //custom image for action bar end
 
-            //custom image for action bar start
-            getSupportActionBar().setDisplayShowCustomEnabled(true);
-            LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View view = inflater.inflate(R.layout.home_bar_logo, null);
-            getSupportActionBar().setCustomView(view);
-            //custom image for action bar end
+        //paspaudus logo numeta i pagrindi puslapi
+        logo = findViewById(R.id.logog);
 
-            //paspaudus logo numeta i pagrindi puslapi
-            logo = findViewById(R.id.logog);
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(com.example.agrogidas.MainActivity.this, com.example.agrogidas.MainActivity.class));
+            }
+        });
+        //paspaudus logo numeta i pagrindi puslapi
 
-            logo.setOnClickListener(new View.OnClickListener()
-            {
-                @Override
-                public void onClick(View v)
-                {
-                    startActivity(new Intent(com.example.agrogidas.MainActivity.this, com.example.agrogidas.MainActivity.class));
+        firestore = FirebaseFirestore.getInstance();
+
+        RecyclerView recyclerView = findViewById(R.id.mainminiskelb);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        kombainais = new ArrayList<>();
+        adapter = new Search_bar(this, kombainais);
+        recyclerView.setAdapter(adapter);
+        firestore.collection("Kombainai").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
+                    Kombainai kombainai = documentSnapshot.toObject(Kombainai.class);
+                    kombainais.add(kombainai);
+                    adapter.notifyDataSetChanged();
                 }
-            });
-            //paspaudus logo numeta i pagrindi puslapi
+            }
+        });
+        //search
+        SearchView searchView = findViewById(R.id.searchView);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
 
-            firestore = FirebaseFirestore.getInstance();
-
-            RecyclerView recyclerView = findViewById(R.id.mainminiskelb);
-
-            recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-            kombainais = new ArrayList<>();
-            short_ad_adapter = new short_ad_adapter(this,kombainais);
-            recyclerView.setAdapter(short_ad_adapter);
-            firestore.collection("Kombainai").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                    for (DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
-                        Kombainai kombainai = documentSnapshot.toObject(Kombainai.class);
-                        kombainais.add(kombainai);
-                        short_ad_adapter.notifyDataSetChanged();
-                    }
-                }
-            });
-            //search
-            SearchView searchView = findViewById(R.id.searchView);
-            adapter = new Search_bar(this,kombainais);
-            recyclerView.setAdapter(adapter);
-
-            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-                @Override
-                public boolean onQueryTextSubmit(String query) {
-                    return false;
-                }
-
-                @Override
-                public boolean onQueryTextChange(String newText) {
-                    adapter.getFilter().filter(newText);
-                    return false;
-                }
-            });
-
-        }
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+    }
 
         @Override
         public boolean onCreateOptionsMenu(Menu menu) {
