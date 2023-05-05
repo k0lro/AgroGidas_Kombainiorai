@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -124,41 +125,38 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-        @Override
-        public boolean onCreateOptionsMenu(Menu menu) {
-            // Inflate the menu; this adds items to the action bar if it is present.
-            getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
-            return true;
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.universalusmenu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item1:
+                Intent intent2 = new Intent(MainActivity.this, Informacija.class );
+                startActivity(intent2);
+                return true;
+            case R.id.item2:
+                Intent intent = new Intent(MainActivity.this,loginActivity.class );
+                startActivity(intent);
+                return true;
+            case R.id.item3:
+                if (FirebaseAuth.getInstance().getCurrentUser() != null){
+                    Intent intent1 = new Intent(MainActivity.this,Account.class );
+                    startActivity(intent1);
+                } else {
+                    Toast.makeText(MainActivity.this, "Neprisijungęs",Toast.LENGTH_SHORT).show();
+                }
+                return true;
+
         }
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-            switch (item.getItemId())
-            {
-                case R.id.menukontaktai:
-                    Intent intent = new Intent(com.example.agrogidas.MainActivity.this,Kontakt.class );
-                    startActivity(intent);
-                    return true;
 
-                case R.id.Paskyra:
-                    if (FirebaseAuth.getInstance().getCurrentUser() != null){
-                        Intent intent1 = new Intent(com.example.agrogidas.MainActivity.this,Account.class );
-                        startActivity(intent1);
-                    } else {
-                        Toast.makeText(com.example.agrogidas.MainActivity.this, "Neprisijungęs",Toast.LENGTH_SHORT).show();
-                    }
-                    return true;
-                case R.id.loginActivity:
-                    FirebaseAuth.getInstance().signOut();
-                    Intent intent2 = new Intent(com.example.agrogidas.MainActivity.this,loginActivity.class );
-                    startActivity(intent2);
-                    CreatepopUpwindow();
-                    return true;
-
-                default:
-                    return super.onOptionsItemSelected(item);
-
-            }
-        }
+        return super.onOptionsItemSelected(item);
+    }
 
         private void CreatepopUpwindow() {
             LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
