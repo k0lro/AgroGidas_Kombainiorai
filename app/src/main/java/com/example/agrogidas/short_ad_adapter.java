@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,17 +17,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.agrogidas.users.Kombainai;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class  short_ad_adapter extends RecyclerView.Adapter<short_ad_adapter.ViewHolder>{
 
     Context context;
     List<Kombainai> list;
+    //List<Kombainai> filteredList;
 
     public short_ad_adapter(Context context, List<Kombainai> list)
     {
         this.context = context;
         this.list = list;
+        //this.list = filteredList;
 
     }
 
@@ -54,12 +59,10 @@ public class  short_ad_adapter extends RecyclerView.Adapter<short_ad_adapter.Vie
             }
         });
     }
-
     @Override
     public int getItemCount() {
         return list.size();
     }
-
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imageView;
