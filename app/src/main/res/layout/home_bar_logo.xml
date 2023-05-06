@@ -6,9 +6,13 @@
 
     <ImageView
         android:id="@+id/logog"
-        android:layout_width="match_parent"
+        android:contentDescription="Logotipas"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="80dp"
         android:clickable="true"
+        android:foregroundGravity="left"
         android:src="@mipmap/barlogo" />
 </RelativeLayout>
