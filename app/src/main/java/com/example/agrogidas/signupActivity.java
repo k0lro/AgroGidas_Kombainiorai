@@ -25,6 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Pattern;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class signupActivity extends AppCompatActivity {
 
@@ -177,13 +178,15 @@ public class signupActivity extends AppCompatActivity {
             return;
         }
 
+        String hpassword = userPassword;
+        String hashedPassword = BCrypt.hashpw(hpassword, BCrypt.gensalt());
         //nauju user'iu sukurimas
         auth.createUserWithEmailAndPassword(userEmail,userPassword)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
-                            UsersM user = new UsersM(userName, userSName, userEmail, userPassword);
+                            UsersM user = new UsersM(userName, userSName, userEmail, hashedPassword);
                             String id = task.getResult().getUser().getUid();
                             database.getReference().child("NormalUsers").child(id).setValue(user);
 

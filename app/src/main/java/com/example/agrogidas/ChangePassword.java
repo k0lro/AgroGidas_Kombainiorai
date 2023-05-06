@@ -27,9 +27,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
+import org.mindrot.jbcrypt.BCrypt;
 import java.util.regex.Pattern;
-
 public class ChangePassword extends AppCompatActivity {
     Button changePass;
     EditText oldPass, newPass;
@@ -43,6 +42,7 @@ public class ChangePassword extends AppCompatActivity {
     TextView raides8_txt, didzioji_txt, skaicius_txt;
 
     ImageView raides8_img, didzioji_img, skaicius_img;
+
 
     private boolean simb8 = false, didzraid = false, skaic = false;
     @Override
@@ -146,6 +146,7 @@ public class ChangePassword extends AppCompatActivity {
         else
         {
             changePass.setBackgroundColor(getResources().getColor(R.color.invalid));
+            changePass.setEnabled(false);
         }
     }
     private void ChangePasswd() {
@@ -162,6 +163,8 @@ public class ChangePassword extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("NormalUsers");
         userID = user.getUid();
+        String hpassword = userPassword;
+        String hashedPassword = BCrypt.hashpw(hpassword, BCrypt.gensalt());
         if(!userPassword.equals(newPassword))
         {
             reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -182,7 +185,7 @@ public class ChangePassword extends AppCompatActivity {
                                                         public void onComplete(@NonNull Task<Void> task) {
                                                             if(task.isSuccessful()) {
                                                                 Toast.makeText(ChangePassword.this,"Slaptažodis pakeistas",Toast.LENGTH_SHORT).show();
-                                                                UsersM userm = new UsersM(userProfile.name, userProfile.sname, userProfile.email, newPassword);
+                                                                UsersM userm = new UsersM(userProfile.name, userProfile.sname, userProfile.email, hashedPassword);
                                                                 database.getReferenceFromUrl("https://agrogidas-f3013-default-rtdb.europe-west1.firebasedatabase.app/").child("NormalUsers").child(userID).setValue(userm);
                                                                 startActivity(new Intent(ChangePassword.this, Account.class));
                                                             }

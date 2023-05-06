@@ -17,6 +17,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+
+import org.mindrot.jbcrypt.BCrypt;
 
 public class loginActivity extends AppCompatActivity {
 
@@ -24,6 +27,8 @@ public class loginActivity extends AppCompatActivity {
     TextView signUp, forgot;
     EditText email, passwd;
     FirebaseAuth auth;
+
+    private FirebaseDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,8 +82,8 @@ public class loginActivity extends AppCompatActivity {
             Toast.makeText(this,"Įrašykite elektroninį paštą",Toast.LENGTH_SHORT).show();
             return;
         }
-        if(TextUtils.isEmpty(userPassword)){
-            Toast.makeText(this,"Įrašykite slaptažodį",Toast.LENGTH_SHORT).show();
+        if(TextUtils.isEmpty(userPassword)) {
+            Toast.makeText(this, "Įrašykite slaptažodį", Toast.LENGTH_SHORT).show();
             return;
         }
         //user login
@@ -96,6 +101,7 @@ public class loginActivity extends AppCompatActivity {
                             else {
                                 Toast.makeText(loginActivity.this, "Nepatvirtintas elektroninis paštas",Toast.LENGTH_LONG).show();
                                 FirebaseAuth.getInstance().getCurrentUser().sendEmailVerification();
+
                             }
                         }
                         else{
