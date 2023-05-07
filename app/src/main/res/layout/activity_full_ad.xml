@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".full_ad">
+    tools:context=".full_ad"
+    >
 
     <ImageView
         android:id="@+id/pagrindine_foto"
