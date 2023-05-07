@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    >
 
     <fragment
         android:id="@+id/nav_host_fragment_content_main"
@@ -22,11 +23,9 @@
         android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="72dp"
         android:background="@drawable/search_view"
         app:iconifiedByDefault="false"
-        app:layout_constraintBottom_toTopOf="@+id/mainminiskelb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,8 +35,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainminiskelb"
         android:layout_width="400dp"
-        android:layout_height="642dp"
-        android:layout_marginTop="170dp"
+        android:layout_height="680dp"
+        android:layout_marginTop="130dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
