@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="app/src/main/res/mipmap-xxxhdpi/autogidas.png" alt="Logo" width="1000" height="500">
+    <img src="app/src/main/res/mipmap-xxxhdpi/baltas.png" alt="Logo">
 </div>
 
 # AgroGidas
@@ -11,6 +11,7 @@
 * Gustis Dasevičius
 * Lukas Peleckis
 * Gytis Meškuotis
+
 
 ## Techninės užduotys
 
