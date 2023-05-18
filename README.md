@@ -23,7 +23,7 @@ Programa "Agrogidas" yra skirta išmaniems android įrenginiams programėlė kur
 * Skelbimų peržiūra
 * Skelbimų paieška, filtravimas
 * Informacija apie programėlę
-* Diznaino sprendimai
+* Dizaino sprendimai
 
 # Architektūra
 
