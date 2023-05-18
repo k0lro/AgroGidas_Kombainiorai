@@ -13,13 +13,17 @@
 
 # Aprašymas
 
-Programa "Agrogidas" yra skirta išmaniems android įrenginiams programėlė kuri leidžia susikūrus paskyrą peržiūrėti kombainus.
+Programa "Agrogidas" yra skirta išmaniems android įrenginiams programėlė kuri leidžia susikūrus paskyrą peržiūrėti kombainus. Programėlė taip pat leidžia tvarkyti ir peržiūrėti savo paskyrą.
 
 # Techninės užduotys
 
-* "Firebase" duomenų bazės sukūrimas ir naudojimas
-* "Android studio" naudojimas programai sukurti
-* Oh, and don't forget this
+* Paskyros sukūrimas
+* Paskyros peržiūra
+* Slaptažodžio paketimo funkcija per paštą
+* Skelbimų peržiūra
+* Skelbimų paieška, filtravimas
+* Informacija apie programėlę
+* Diznaino sprendimai
 
 # Architektūra
 
