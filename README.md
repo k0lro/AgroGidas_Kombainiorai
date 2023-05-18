@@ -2,10 +2,8 @@
     <img src="app/src/main/res/mipmap-xxxhdpi/baltas.png" alt="Logo">
 </div>
 
-# AgroGidas
 
-
-## Komandos "Kombainiorai" nariai:
+# Komandos "Kombainiorai" nariai:
 
 * Giedrius Šlikta
 * Gustis Dasevičius
@@ -13,21 +11,24 @@
 * Gytis Meškuotis
 
 
-## Techninės užduotys
+# Aprašymas
 
-* You need this
-* And you need this
+Programa "Agrogidas" yra skirta išmaniems android įrenginiams programėlė kuri leidžia susikūrus paskyrą peržiūrėti kombainus.
+
+# Techninės užduotys
+
+* "Firebase" duomenų bazės sukūrimas ir naudojimas
+* "Android studio" naudojimas programai sukurti
 * Oh, and don't forget this
 
-## architektūra
+# Architektūra
 
 
 
-## Testavimas ir jo rezultatai
+# Testavimas ir jo rezultatai
 
 
-## Naudotojo dokumentacija
-
+# Naudotojo dokumentacija
 ```
 $ First step
 $ Another step
