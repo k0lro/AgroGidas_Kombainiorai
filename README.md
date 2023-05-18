@@ -1,6 +1,5 @@
 <div align="center">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-
+    <img src="app/src/main/res/mipmap-xxxhdpi/autogidas.png" alt="Logo" width="1000" height="500">
 </div>
 
 # AgroGidas
