@@ -44,9 +44,8 @@ Programa "Agrogidas" yra skirta išmaniems android įrenginiams programėlė kur
 # Testavimas ir jo rezultatai
 
 ![image](https://github.com/k0lro/AgroGidas_Kombainiorai/assets/126868510/7164face-346d-4ff0-b341-fd07f42e5299)
-![image](https://github.com/k0lro/AgroGidas_Kombainiorai/assets/126868510/8c242c01-c3a8-4104-a290-360c1f8082cc)
+![image](https://github.com/k0lro/AgroGidas_Kombainiorai/assets/126868510/d9ea21dd-017d-4746-90fa-c1b2610a1ddc)
 ![image](https://github.com/k0lro/AgroGidas_Kombainiorai/assets/126868510/84bc3adc-e29a-485c-a734-a395c525bec6)
-
 
 # Naudotojo dokumentacija
 ```
