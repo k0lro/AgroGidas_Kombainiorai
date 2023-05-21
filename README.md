@@ -53,8 +53,4 @@ Atlikę testavimus galime matyti, kad mūsų programėlė veikia taip kaip ir pl
 ![image](https://github.com/k0lro/AgroGidas_Kombainiorai/assets/126868510/84bc3adc-e29a-485c-a734-a395c525bec6)
 
 # Naudotojo dokumentacija
-```
-$ First step
-$ Another step
-$ Final step
-```
+https://github.com/lukaspel/AgroGidas_Kombainiorai/wiki
