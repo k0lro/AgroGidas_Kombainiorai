@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +34,7 @@ public class ForgotPassword extends AppCompatActivity {
 
         //el pasto nuskaitymas
         emailedittext = (EditText) findViewById(R.id.priminimolaukas);
+
         //slaptazodzio pakeitimo mygtukas
         resetpassword = (Button) findViewById(R.id.siustimygtukas);
         auth= FirebaseAuth.getInstance();
@@ -71,7 +73,12 @@ public class ForgotPassword extends AppCompatActivity {
     //Jeigu paštas teisingas, programa palauks dvi sekundes ir nukreips į loginactivity
     private void resetPassword()
     {
+
         String email= emailedittext.getText().toString();
+        if(TextUtils.isEmpty(email)) {
+            Toast.makeText(this, "Įrašykite el. paštą", Toast.LENGTH_SHORT).show();
+            return;
+        }
         auth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
@@ -88,7 +95,7 @@ public class ForgotPassword extends AppCompatActivity {
                 }
                 else {
 
-                    Toast.makeText(ForgotPassword.this, "Įvyko problema", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ForgotPassword.this, "Tokio el. pašto nėra", Toast.LENGTH_LONG).show();
                 }
 
             }
