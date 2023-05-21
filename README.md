@@ -17,6 +17,8 @@ Programa "Agrogidas" yra skirta išmaniems android įrenginiams programėlė kur
 
 # Techninės užduotys
 
+Mūsų techninė užduotis sukurti išmaniajam android įrenginiui programėlę kuri leidžia naudotojui susikurti paskyrą ir prisijungus peržiūrėti sistemoje visus esamus kombainus. Programėlė parodo paskyros duomenis ir leidžia paskyrą valdyti, taip pat yra kombainų paieškos ir filtravimo sistema.
+
 ## Naudojamos priemonės,technologijos projektui atlikti
 
 * Firebase
@@ -43,6 +45,7 @@ Agrogrido projekto architektūrinė diagrama:
 
 
 # Testavimas ir jo rezultatai
+Atlikę testavimus galime matyti, kad mūsų programėlė veikia taip kaip ir planavome, visi rezultatai tokie kokių tikėjomis.
 
 ![image](https://github.com/k0lro/AgroGidas_Kombainiorai/assets/126868510/7164face-346d-4ff0-b341-fd07f42e5299)
 ![image](https://github.com/k0lro/AgroGidas_Kombainiorai/assets/126868510/d9ea21dd-017d-4746-90fa-c1b2610a1ddc)
