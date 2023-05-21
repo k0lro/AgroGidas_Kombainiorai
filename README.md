@@ -17,6 +17,8 @@ Programa "Agrogidas" yra skirta išmaniems android įrenginiams programėlė kur
 
 # Techninės užduotys
 
+Mūsų techninė užduotis sukurti išmaniajam android įrenginiui programėlę kuri leidžia naudotojui susikurti paskyrą ir prisijungus peržiūrėti sistemoje visus esamus kombainus. Programėlė parodo paskyros duomenis ir leidžia paskyrą valdyti, taip pat yra kombainų paieškos ir filtravimo sistema.
+
 ## Naudojamos priemonės,technologijos projektui atlikti
 
 * Firebase
