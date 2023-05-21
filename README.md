@@ -38,7 +38,8 @@ Programa "Agrogidas" yra skirta išmaniems android įrenginiams programėlė kur
 * Dizaino sprendimai
 
 # Architektūra
-
+Agrogrido projekto architektūrinė diagrama:
+![poggersXDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD](https://github.com/Gamauwu/AgroGidas_Kombainiorai/assets/125763002/d169f996-564e-4518-95d9-9eb5d7b73ef2)
 
 
 # Testavimas ir jo rezultatai
